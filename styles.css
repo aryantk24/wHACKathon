@@ -1,0 +1,99 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    overflow: auto; /* Allow scrolling */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align top for better scrolling */
+    text-align: center;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Enable scrolling in container */
+    max-height: 90%; /* Prevent it from growing too tall */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+form {
+    max-height: 80vh; /* Prevent the form from growing beyond the viewport height */
+    overflow-y: auto; /* Allow scrolling inside the form if needed */
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="file"], button {
+    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition for form elements */
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="file"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background: #333; /* Dark background for the body */
+    color: #fff; /* Light text color */
+}
+
+body.dark-mode .container {
+    background: rgba(0, 0, 0, 0.8); /* Darker background for the container */
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="number"],
+body.dark-mode input[type="date"],
+body.dark-mode input[type="file"] {
+    background-color: #444; /* Darker input fields */
+    color: #fff; /* Light text color inside input fields */
+    border: 1px solid #666; /* Lighter border */
+}
+
+body.dark-mode button {
+    background-color: #3e8e41; /* Darker button for dark mode */
+    color: white; /* Light text color on buttons */
+}
+
+body.dark-mode button:hover {
+    background-color: #45a049; /* Darker hover effect for button */
+}
+
+body.dark-mode h1 {
+    color: #fff; /* Light text color for the header */
+}
+
+/* Optional: Dark mode toggle slider color */
+body.dark-mode .switch input:checked + .slider {
+    background-color: #4CAF50; /* Green background for toggle switch */
+}
