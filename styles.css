@@ -97,3 +97,55 @@ body.dark-mode h1 {
 body.dark-mode .switch input:checked + .slider {
     background-color: #4CAF50; /* Green background for toggle switch */
 }
+
+/* Media Queries for Responsiveness */
+
+/* For mobile screens */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    form {
+        max-height: 70vh; /* Allow the form to grow on smaller screens */
+    }
+
+    input[type="text"], input[type="number"], input[type="date"], input[type="file"] {
+        width: 100%;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+/* For tablets (600px - 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 85%;
+    }
+
+    form {
+        max-height: 75vh; /* Adjust form size for tablets */
+    }
+
+    button {
+        padding: 9px 18px;
+    }
+}
+
+/* For desktop and larger screens */
+@media screen and (min-width: 901px) {
+    .container {
+        width: 60%; /* For larger screens, container takes up less width */
+    }
+
+    form {
+        max-height: 80vh;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
